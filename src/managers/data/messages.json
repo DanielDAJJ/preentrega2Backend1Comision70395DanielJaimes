@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "user": "Daniel",
+    "message": "Holi"
+  },
+  {
+    "user": "Paula",
+    "message": "Hola mi amor hermoso"
+  },
+  {
+    "user": "Kiwis",
+    "message": "Hola papis los amo"
+  }
+]

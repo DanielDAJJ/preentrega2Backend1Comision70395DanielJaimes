@@ -26,12 +26,14 @@ const messages = new messageManager();
 const io = new Server(httpServer);
 
 io.on('connection', async (socket) => {
-    console.log('usuario conectadogit status');
+    console.log('usuario conectado');
+    socket.emit('messageLogs', await messages.getMessages()); 
     socket.on('newUser', (data)=>{
         socket.broadcast.emit('newUser', data)
     });
-    socket.on('message', (data)=>{
-        messages.push(data);
-        io.emit('messageLogs', messages);
+    socket.on('message', async (data)=>{
+        // messages.push(data);
+        await messages.saveMessages(data);
+        io.emit('messageLogs', await messages.getMessages());
     });
 });
