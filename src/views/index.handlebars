@@ -1,10 +1,13 @@
 <div class="container mt-5">
-    <h1>Chat Perron</h1>
-    <div>
-        <input type="text" name="" id="chatBox">
+    <div class="d-flex flex-row title">
+        <h1 class="col text-center">Chat Perron</h1>
     </div>
-    <div id="messageLogs">
-        
+    <div class="d-flex flex-column-reverse gy-3 align-items-end justify-content-end mensajes">
+        <div class="col-12">
+            <input type="text" name="mensajes" id="chatBox" placeholder="Escribe tu mensaje aquí" class="text-end">
+        </div>
+        <div id="messageLogs" class="mb-4 col-12 text-end mensajesContainer">
+        </div>
     </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
